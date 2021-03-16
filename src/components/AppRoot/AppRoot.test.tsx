@@ -9,7 +9,7 @@ describe('AppRoot', () => {
   baselineComponent(AppRoot, { forward: false });
   describe('Manages portal root in embedded mode', () => {
     describe('Creates & injects portal root', () => {
-      it.each(['embedded'])('in %s mode', (mode) => {
+      it.each(['embedded', 'partial'])('in %s mode', (mode) => {
         let portalRoot: HTMLElement;
         const { unmount } = render((
           <AppRoot {...{ [mode]: true }}>
